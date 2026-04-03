@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <head>
+    <link rel="icon" type="image/x-icon" href="swk.png">
+    
+    <title>ระบบจัดพิมพ์เอกสารมอบตัวนักเรียน</title>
+</head>
+<style>
+  /* 1. จัดตำแหน่งให้ดลโก้อยู่กลางหน้าจอ */
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;  /* จัดแนวนอน */
+    align-items: center;      /* จัดแนวตั้ง */
+    height: 200px;            /* กำหนดความสูงของพื้นที่ */
+  }
+
+  /* 2. กำหนดลักษณะของโลโก้และแอนิเมชั่น */
+  .animated-logo {
+    width: 150px;
+    height: auto;
+    
+    /* เรียกใช้แอนิเมชั่นชื่อ float ที่สร้างไว้ด้านล่าง */
+    animation: float 10s ease-in-out infinite; 
+  }
+
+  /* 3. สร้างแอนิเมชั่น (ในที่นี้คือการลอยขึ้น-ลง) */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px); /* ลอยขึ้น 20 พิกเซล */
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="logo-wrapper">
+    <img src="swk.png" alt="โลโก้โรงเรียน" class="animated-logo">
+  </div>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>พิมพ์เอกสารมอบตัว - โรงเรียนสามัคคีวิทยาคม</title>
